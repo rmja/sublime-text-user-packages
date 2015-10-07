@@ -1,0 +1,24 @@
+[
+    { "keys": ["ctrl+7"], "command": "toggle_comment", "args": { "block": false } },
+    { "keys": ["ctrl+shift+7"], "command": "toggle_comment", "args": { "block": true } },
+
+    // http://superuser.com/a/540801
+    { "keys": ["("], "command": "insert_snippet", "args": {"contents": "( $0 )"}, "context":
+        [
+            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+            { "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|]|;|\\}|$)", "match_all": true },
+            { "key": "selector", "operator": "equal", "operand": "source.c" }
+        ]
+    },
+    { "keys": ["("], "command": "insert_snippet", "args": {"contents": "( ${0:$SELECTION} )"}, "context":
+        [
+            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true },
+            { "key": "selector", "operator": "equal", "operand": "source.c" }
+        ]
+    },
+
+    { "keys": ["ctrl+shift+h"], "command": "prompt_function_group_header" },
+    { "keys": ["ctrl+k", "ctrl+d"], "command": "find_under_expand_skip" }
+]

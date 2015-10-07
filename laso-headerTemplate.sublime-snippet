@@ -1,0 +1,48 @@
+<snippet>
+    <content><![CDATA[
+/*
+ * Copyright (c) Utiliread
+ *
+ * \$HeadURL\$:
+ * \$Revision\$:
+ * \$Author\$:
+ * \$Date\$:
+ * \$Id\$:
+ */
+
+/**
+ * \ingroup ${1:group}
+ * @{
+ */
+
+/**
+ * ${2:Description.}
+ *
+ * @file   ${3:modulename}.h
+ * @author Rasmus Melchior Jacobsen <rmj@utiliread.dk>
+ * @date   ${4:February} ${5:1} 2015
+ */
+
+#ifndef __${3/(.+)/\U\1/g}_H__
+#define __${3/(.+)/\U\1/g}_H__
+
+typedef struct ${3:modulename}_ ${3:modulename}_t;
+
+struct ${3:modulename}_
+{
+    ${7}  
+};
+
+typedef struct
+{
+    ${7}
+} ${3:modulename}_t;
+
+error_t ${3:modulename}_init( ${3:modulename}_t* self );
+
+#endif /* __${3/(.+)/\U\1/g}_H__ */
+
+/** @} */
+]]></content>
+    <tabTrigger>ht</tabTrigger>
+</snippet>

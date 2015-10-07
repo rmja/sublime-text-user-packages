@@ -1,0 +1,52 @@
+<snippet>
+    <content><![CDATA[
+/*
+ * Copyright (c) Utiliread
+ *
+ * \$HeadURL\$:
+ * \$Revision\$:
+ * \$Author\$:
+ * \$Date\$:
+ * \$Id\$:
+ */
+
+/**
+ * \ingroup unittest-fake
+ * @{
+ */
+
+/**
+ * @file   fake_$1.h
+ * @author Rasmus Melchior Jacobsen <rmj@utiliread.dk>
+ * @date   ${2:May} ${3:1} 2014
+ */
+
+#ifndef __FAKE_${1/(.+)/\U\1/g}_H__
+#define __FAKE_${1/(.+)/\U\1/g}_H__
+
+#include "$1.h"
+
+typedef struct
+{
+    $1_t __base;
+} fake_$1_t;
+
+void fake_$1_xxx( $1_t* $1 );
+
+/**************************************************************************************************/
+static error_t fake_$1_init( fake_$1_t* self )
+{
+    $1_t* $1 = ($1_t*)self;
+
+    $1->xxx = fake_$1_xxx;
+    $4
+
+    return E_SUCCESS;
+}
+
+#endif /* __FAKE_${1/(.+)/\U\1/g}_H__ */
+
+/** @} */
+]]></content>
+    <tabTrigger>hfaket</tabTrigger>
+</snippet>

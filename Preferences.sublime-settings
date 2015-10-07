@@ -1,0 +1,13 @@
+{
+	"auto_find_in_selection": true,
+	"font_size": 8,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"rulers":
+	[
+		100
+	],
+	"translate_tabs_to_spaces": true
+}

@@ -1,0 +1,60 @@
+<snippet>
+    <content><![CDATA[
+/*
+ * Copyright (c) Utiliread
+ *
+ * \$HeadURL\$:
+ * \$Revision\$:
+ * \$Author\$:
+ * \$Date\$:
+ * \$Id\$:
+ */
+
+/**
+ * \ingroup unittest
+ * @{
+ */
+
+/**
+ * @file   test_$1.h
+ * @author Rasmus Melchior Jacobsen <rmj@utiliread.dk>
+ * @date   ${2:May} ${3:1} 2015
+ */
+
+#include "unity.h"
+#include "$1.h"
+#include "log.h"
+#include "fail.h"
+#include "numberstring.h"
+#include "ownable.h"
+#include "pipe.h"
+#include "print.h"
+#include "atomic.h"
+
+static struct
+{
+    $1_t $1;
+} test;
+
+/**************************************************************************************************/
+void setUp( void )
+{
+    memset( &test, 0, sizeof( test ) );
+}
+
+/**************************************************************************************************/
+void tearDown( void )
+{
+}
+
+/**************************************************************************************************/
+void test_implementMe( void )
+{
+    TEST_IGNORE_MESSAGE( "Implement me!" );
+}
+
+/** @} */
+]]></content>
+    <tabTrigger>ctestt</tabTrigger>
+    <scope>source.c</scope>
+</snippet>
